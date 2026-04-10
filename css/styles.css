@@ -88,7 +88,13 @@ body {
 }
 
 .header-logo {
-    margin-right: 76px;
+    margin-right: 0;
+}
+@media (min-width: 768px) {
+    .header-logo { margin-right: 120px; }
+}
+@media (min-width: 1158px) {
+    .header-logo { margin-right: 76px; }
 }
 
 .footer-logo {
@@ -223,21 +229,58 @@ body {
             rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)
         ),
-        url(../images/people-office.jpg);
+        url(../images/hero-bg-mobile.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+@media (max-width: 767px) and (min-resolution: 192dpi) {
+    .hero {
+        background-image: linear-gradient(
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/hero-bg-mobile@2x.jpg);
+    }
 }
 @media (min-width: 768px) {
     .hero {
         max-width: 768px;
         padding: 112px 0;
+        background-image: linear-gradient(
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/hero-bg-tablet.jpg);
+    }
+}
+@media (min-width: 768px) and (max-width: 1157px) and (min-resolution: 192dpi) {
+    .hero {
+        background-image: linear-gradient(
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/hero-bg-tablet@2x.jpg);
     }
 }
 @media (min-width: 1158px) {
     .hero {
         max-width: 1440px;
         padding: 188px 0;
+        background-image: linear-gradient(
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/hero-bg-desktop.jpg);
+    }
+}
+@media (min-width: 1158px) and (min-resolution: 192dpi) {
+    .hero {
+        background-image: linear-gradient(
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/hero-bg-desktop@2x.jpg);
     }
 }
 
@@ -502,6 +545,9 @@ body {
 
 .portfolio-card {
     flex-basis: 100%;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 @media (min-width: 768px) {
     .portfolio-card { flex-basis: calc((100% - 24px) / 2); }
@@ -781,15 +827,22 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 408px;
-    min-height: 584px;
-    padding: 72px 24px 24px;
+    width: 288px;
+    min-height: 623px;
+    padding: 72px 16px 24px;
     background-color: #fcfcfc;
     border-radius: 4px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (min-width: 768px) {
+    .modal {
+        width: 408px;
+        min-height: 584px;
+        padding: 72px 24px 24px;
+    }
 }
 
 /* =============================================
