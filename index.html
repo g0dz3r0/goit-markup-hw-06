@@ -572,28 +572,28 @@
                 <ul class="mobile-social-list">
                     <li>
                         <a class="social-link" href="#">
-                            <svg width="24" height="24">
+                            <svg class="social-icon" width="24" height="24">
                                 <use href="./images/icons.svg#icon-instagram"></use>
                             </svg>
                         </a>
                     </li>
                     <li>
                         <a class="social-link" href="#">
-                            <svg width="24" height="24">
+                            <svg class="social-icon" width="24" height="24">
                                 <use href="./images/icons.svg#icon-twitter"></use>
                             </svg>
                         </a>
                     </li>
                     <li>
                         <a class="social-link" href="#">
-                            <svg width="24" height="24">
+                            <svg class="social-icon" width="24" height="24">
                                 <use href="./images/icons.svg#icon-facebook"></use>
                             </svg>
                         </a>
                     </li>
                     <li>
                         <a class="social-link" href="#">
-                            <svg width="24" height="24">
+                            <svg class="social-icon" width="24" height="24">
                                 <use href="./images/icons.svg#icon-linkedin"></use>
                             </svg>
                         </a>
@@ -604,12 +604,24 @@
     </div>
 
     <script>
-        const openBtn = document.querySelector('.menu-open-btn');
-        const closeBtn = document.querySelector('.mobile-menu-close');
+        // Mobile menu
+        const menuOpenBtn = document.querySelector('.menu-open-btn');
+        const menuCloseBtn = document.querySelector('.mobile-menu-close');
         const mobileMenu = document.querySelector('.mobile-menu');
 
-        openBtn.addEventListener('click', () => mobileMenu.classList.add('is-open'));
-        closeBtn.addEventListener('click', () => mobileMenu.classList.remove('is-open'));
+        menuOpenBtn.addEventListener('click', () => mobileMenu.classList.add('is-open'));
+        menuCloseBtn.addEventListener('click', () => mobileMenu.classList.remove('is-open'));
+
+        // Modal
+        const heroBtn = document.querySelector('.hero-btn');
+        const backdrop = document.querySelector('.backdrop');
+        const modalCloseBtn = document.querySelector('.modal-close-btn');
+
+        heroBtn.addEventListener('click', () => backdrop.classList.add('is-open'));
+        modalCloseBtn.addEventListener('click', () => backdrop.classList.remove('is-open'));
+        backdrop.addEventListener('click', (e) => {
+            if (e.target === backdrop) backdrop.classList.remove('is-open');
+        });
     </script>
 </body>
 

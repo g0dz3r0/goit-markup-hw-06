@@ -220,7 +220,6 @@ body {
    ============================================= */
 
 .hero {
-    max-width: 320px;
     margin: 0 auto;
     padding: 72px 0;
     text-align: center;
@@ -245,7 +244,6 @@ body {
 }
 @media (min-width: 768px) {
     .hero {
-        max-width: 768px;
         padding: 112px 0;
         background-image: linear-gradient(
                 rgba(46, 47, 66, 0.7),
@@ -678,10 +676,14 @@ body {
 
 .footer-text {
     max-width: 264px;
+    margin: 0 auto;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+}
+@media (min-width: 768px) {
+    .footer-text { margin: 0; }
 }
 
 .footer-social-title {
