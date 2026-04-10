@@ -191,8 +191,8 @@ body {
 
 .contacts-link {
     display: block;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 0;
+    padding-bottom: 0;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
@@ -551,7 +551,10 @@ body {
     .portfolio-card { flex-basis: calc((100% - 24px) / 2); }
 }
 @media (min-width: 1158px) {
-    .portfolio-card { flex-basis: calc((100% - 48px) / 3); }
+    .portfolio-card {
+        flex-basis: calc((100% - 48px) / 3);
+        box-shadow: none;
+    }
 }
 
 .portfolio-link {
@@ -655,10 +658,10 @@ body {
 }
 
 .footer-logo-wrap {
-    text-align: center;
+    text-align: left;
 }
-@media (min-width: 768px) {
-    .footer-logo-wrap { text-align: left; }
+@media (max-width: 767px) {
+    .footer-logo-wrap { text-align: center; }
 }
 @media (min-width: 1158px) {
     .footer-logo-wrap { margin-right: 120px; }
